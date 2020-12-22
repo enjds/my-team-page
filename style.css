@@ -1,0 +1,147 @@
+:root {
+    --primary-color: #000000;
+    --secondary-color: #A9A9A9;
+    --font-family: 'Poppins', sans-serif;
+    --font-family-logo: 'PT Serif', serif;
+    --font-family-footer: 'Montserrat', sans-serif;
+}
+
+/* RESET */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 10px;
+}
+
+p {
+    max-width: 439px;
+    font-size: 1.8rem;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+.container {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    height: 100vh;
+
+    font-family: var(--font-family);
+    font-size: 1.8rem;
+}
+
+.container--center {
+    margin: 0 auto;
+}
+
+/* CONTENT */
+.title {
+    font-family: var(--font-family-logo);
+    font-weight: 700;
+    font-size: 3.6rem;
+}
+
+.description__title {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 1.8rem;
+}
+
+.description__details {
+    font-weight: 400;
+    font-size: 1.8rem;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 10px;
+}
+
+.content__profile {
+    max-width: 300px;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.content__image {
+   width:90%;
+}
+
+.content__job {
+    width: 100%;
+    transform-origin: bottom right;
+    text-transform: uppercase;
+    transform: rotate(90deg) translate(95%, 0);
+    position: absolute;
+    top: 0;
+    right: 8%;
+    font-size: 1.2rem;
+    font-weight: 400;
+    font-family: var(--font-family-logo);
+}
+
+/* FOOTER */
+.author {
+    margin-top: 109px;
+    margin-bottom: 30px;
+    height: 20px;
+    text-align: center;
+
+}
+
+/*  TABLET */
+@media only screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+    }
+
+    .container {
+        margin: 71px 12px 69px 12px;
+    }
+
+    .description {
+        margin-bottom: 40px;
+    }
+
+    .description__title {
+        margin-top: 38px;
+        margin-bottom: 10px;
+    }
+
+    .content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .content__profile {
+        margin-top: 0;
+    }
+
+    .content__profile:nth-child(2n+2) {
+        margin-top: 66px;
+    }
+
+    .author {
+        margin-bottom: 69px;
+    }
+}
+
+/* DESKTOP */
+@media only screen and (min-width: 769px) {
+    header {
+        margin-top: 110px;
+    }
+
+    .description {
+        margin-bottom: 96px;
+    }
+
+    .content__profile:nth-child(3n+2) {
+        margin-top: 66px;
+    }
+}
